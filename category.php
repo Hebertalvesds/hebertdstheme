@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php
-    $class = remove_accents(wp_title);
+    $class = remove_accents(wp_title());
 ?>
 <div class="row pr-20-lg pl-20-lg page-<?php echo $class ?>" style="margin-left: -8px; margin-right: -8px;">
     <div class="cell-sm-12 cell-md-8 cell-lg-7 p-0">
