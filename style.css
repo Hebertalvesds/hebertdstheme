@@ -1,0 +1,365 @@
+/*
+Theme Name: hebertds
+Theme URI: https://hebertds.com.br
+Author: Atrello Team
+Author URI: https://hebertds.com.br
+Description:
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: atrello
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Slab');
+:root{
+    --blue-windows: #0050ef;
+    --blue-windows-hover: #0036a3;
+    --theme-bg:#0050ef;
+    --theme-hover:#0036a3;
+    --theme-border:#0036a3;
+    --color-light: rgb(248,248,248);
+    --body-color: rgb(240,240,255);
+    --active: rgba(26,26,26, .5);
+}
+.bg-theme{
+    background-color: var(--theme-bg) !important;
+}
+.bg-theme-hover:hover{
+    background-color: var(--theme-hover) !important;
+}
+.bd-theme{
+    border-color: var(--theme-border);
+}
+body{
+    background-color: var(--body-color) !important;
+}
+.app-header{
+    position: absolute;
+    padding: 8px 12px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+.app-header .brand{
+    font-family: "Roboto Condensed", "Segoe UI";
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(41,41,41);
+    text-decoration: none;
+}
+.app-header .app-commands{
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-header .app-commands .menu-container{
+    position: absolute;
+    top: 0;
+    width: 320px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.menu-container > .menu-menu-principal-container{
+    width: 100%;
+    top: 18px;
+    z-index: 1030;
+}
+.app-menu{
+    padding: 12px 18px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    border-top-width: 4px;
+    border-top-style: solid;
+}
+.app-menu::before{
+    content: "";
+    display: block;
+    height: 0px;
+    width: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: inherit;
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 10px);
+}
+.app-menu li, .app-menu li a{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+.app-menu li:hover{
+    border: 1px solid rgba(26,26,26,.1);
+    border-radius: .25rem;
+}
+.app-menu li[class*="ico-"] a::before{
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 12px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.menu-toggle, .command-toggle{
+    background-color: rgb(255,255,255);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: .25rem;
+    padding: 0;
+    z-index: 1050;
+}
+.menu-toggle:focus, .menu-toggle:active, .command-toggle:focus, .command-toggle:active{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.font-roboto{
+    font-family: "Roboto"
+}
+.font-roboto p{
+    font-family: "Roboto Slab";
+}
+p{
+    font-family: "Segoe UI", "Roboto Slab", serif;
+    font-size: 16px;
+}
+.pagination a{
+    padding: inherit;
+    width: 100%;
+    text-align: center;
+    text-decoration: none !important;
+    background-color: var(--blue-windows) !important;
+    border-radius: 2px;
+    color: rgb(248,248,248) !important;
+}
+.pagination a:hover{
+    background-color: var(--blue-windows-hover)!important;
+}
+.post-content p{
+    font-family: "Roboto Slab" !important;
+}
+/* Sarch Form */
+#searchform div{
+    position: relative;
+    display: flex;
+}
+#searchform div label{
+    display: none;
+}
+#searchform div input[type="submit"]{
+    background-color: var(--blue-windows);
+    color: var(--color-light);
+}
+/* Search Form End */
+/* Sidebars */
+#sidebar-right .menu{
+    list-style: none;
+    margin: 0;
+}
+#sidebar-right .menu li, #sidebar-right .menu li a{
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    line-height: 36px;
+    border-radius: 4px;
+    margin: 3px 0px;
+}
+#sidebar-right .menu li a{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 40px;
+    padding-left: 8px;
+    display: block;
+}
+#sidebar-right .menu li.current-menu-item{
+    background-color: var(--body-color);
+    color: rgb(248,248,248) !important;
+}
+#sidebar-right .menu li:hover, #sidebar-right .menu li a:hover{
+    background-color: var(--body-color) !important;
+}
+/* Sidebars End */
+/* Icons */
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+#sidebar-right .icon::before{
+    display: none;
+}
+#sidebar-right .icon a::before{
+    content: "";
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.ico-home a::before, .ico-home::before{
+    background-image: url(images/home.png);
+}
+.ico-blog a::before, .ico-blog::before{
+    background-image: url(images/blog.png);
+}
+.ico-image a::before, .ico-image::before{
+    background-image: url(images/image.png);
+}
+.ico-comment a::before, .ico-comment::before{
+    background-image: url(images/comment.png);
+}
+.ico-tec a::before, .ico-tec::before{
+    background-image: url(images/tec.png);
+}
+.ico-idea a::before, .ico-idea::before{
+    background-image: url(images/idea.png);
+}
+.ico-edu a::before, .ico-edu::before{
+    background-image: url(images/edu.png);
+}
+.ico-meditation a::before, .ico-meditation::before{
+    background-image: url(images/meditation.png);
+}
+/* Icons End */
+/* Muuri */
+.muuri{
+    position: relative !important;
+}
+.muuri .item{
+    position: absolute;
+    z-index: 1;
+}
+.muuri .item a{
+    text-decoration: none;
+}
+.muuri .item .text{
+    height: 150px;
+}
+.muuri .image{
+
+}
+.muuri .video{
+
+}
+.muuri .twitter{
+
+}
+.muuri .card{
+    border-radius: 4px !important;
+}
+.muuri .card.featured-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px !important;
+}
+.muuri .card.featured-image::before{
+    border-radius: 4px;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 18, 56, 0.4);
+}
+.muuri .card.featured-image .title{
+    color: rgb(248, 248, 248) !important;
+    font-size: 2rem !important;
+}
+.muuri .card.text .title{    
+    font-size: 1.2rem;
+}
+.muuri .card .title{
+    width: 100%;
+    display: block;
+}
+.muuri .card.featured-image .category{
+    color: rgb(248, 248, 248) !important;
+}
+/* Muuri End */
+/* Tags */
+a[rel="tag"]{
+    color: inherit !important;
+    text-decoration: inherit !important;
+}
+.tagcloud .tag-cloud-link{
+    font-size: 8pt !important;
+    text-decoration: none !important;
+    background-color: rgb(1,1,1) !important;
+    padding: 3px 5px !important;
+    color: white !important;
+    border-radius: 2px !important;
+}
+.tagcloud .tag-cloud-link .tag-link-count{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(187,0,0);
+    color: #ffffff;
+    border-radius: .25rem;
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    -webkit-transform: translateY(-50%) translateX(50%);
+    transform: translateY(-50%) translateX(50%);
+}
+/* Tags End */
+/* Efects */
+.shadow-1{
+    box-shadow: 0px 2px 3px 1px rgba(0,0,0,.1) !important;
+}
+/* Responsive */
+@media screen and (max-width: 768px){
+    #sidebar-right{
+        background: rgb(240,240,255) !important;
+        bottom: 0;
+        top: 0;
+        height: 100%;
+        z-index: 1050;
+    }
+}
