@@ -12,7 +12,7 @@
         <?php while(have_posts()) : the_post();?>
             <div class="card p-3 m-2">
                 <div class="d-block-inline mb-1">
-                    <?php the_tags("<span class='button mini border-radius bg-gray fg-dark text-bold border-none d-block-inline'>","","</span>"); ?>
+                <?php the_tags("<span class='button mini bg-transparent tags'>","","</span>"); ?>
                 </div>                
                 <div class="fg-gray"><?php the_date() ?></div>
                 <h3 class="fg-dark font-roboto text-bold"><?php the_title() ?></h3>
