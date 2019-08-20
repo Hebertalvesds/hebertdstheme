@@ -258,6 +258,9 @@ p{
 .ico-meditation a::before, .ico-meditation::before{
     background-image: url(images/meditation.png);
 }
+.ico-front-end a::before, .ico-front-end::before{
+    background-image: url(images/front-end.png);
+}
 /* Icons End */
 /* Muuri */
 .muuri{

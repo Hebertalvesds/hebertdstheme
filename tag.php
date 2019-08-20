@@ -1,9 +1,14 @@
 <?php get_header(); ?>
-<?php query_posts('showposts=32') ?>
+<?php 
+$args = array('tag'=> substr($wp->request,4),
+              'showpostss'=>32);
+
+?>
+<?php query_posts($args) ?>
 <div class="row pr-20-lg pl-20-lg" style="margin-left: -8px; margin-right: -8px;">
     <div class="cell-sm-12 cell-md-12 cell-lg-12 p-0">
         <div class="m-2 text-leader">
-            <h3 class="display3 d-block"><?php echo wp_title("")?></h3>
+            <h3 class="display3 d-block"><?php wp_title("")?></h3>
         </div>
         <?php if (!is_null(previous_posts_link())) : ?>
             <div class="pagination p-3 mb-0">
