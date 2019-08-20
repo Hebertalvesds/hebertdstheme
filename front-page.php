@@ -35,7 +35,7 @@ $recents = wp_get_recent_posts(array(
                 $image = get_background_image_header($post->post_content);
                 $has_image = ($image != "") ? "featured-image " : "";
             ?>
-            <div class="item cell-sm-6 cell-md-4 cell-lg-4 cell-xl-3 p-0">
+            <div class="item cell-sm-6 cell-md-4 cell-lg-4 cell-xl-4 p-0">
                 <div class="item-content">
                     <a class="post-relative card text d-block p-3 <?php echo $has_image?>" href="<?php echo get_the_permalink($post->ID);?>"
                     style="<?php echo $image;?>">
