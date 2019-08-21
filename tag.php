@@ -17,7 +17,7 @@ $args = array('tag'=> substr($wp->request,4),
         <?php endif; ?>
         <?php 
         if ( function_exists('yoast_breadcrumb') ) {
-            yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+            yoast_breadcrumb( '<p class="breadcrumbs m-2 p-3 border-radius-2">','</p>' );
         }       
         ?>
         <div class="muuri">

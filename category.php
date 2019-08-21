@@ -6,7 +6,7 @@
     <div class="cell-sm-12 cell-md-8 cell-lg-7 p-0">
         <?php 
         if ( function_exists('yoast_breadcrumb') ) {
-            yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+            yoast_breadcrumb( '<p class="breadcrumbs m-2 p-3 border-radius-2">','</p>' );
         }
         ?>
         <div class="remark m-2 bg-white border-radius-2 text-leader">

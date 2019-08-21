@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="cell-sm-10 cell-xl-8 p-5 p-20-lg bg-white wp_single_post pos-relative">
         <?php 
         if ( function_exists('yoast_breadcrumb') ) {
-            yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+            yoast_breadcrumb( '<p class="breadcrumbs m-2 p-3 border-radius-2">','</p>' );
         }
         ?>
         <span class="fg-gray">
