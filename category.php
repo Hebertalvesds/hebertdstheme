@@ -4,6 +4,11 @@
 ?>
 <div class="row pr-20-lg pl-20-lg page-<?php echo $class ?>" style="margin-left: -8px; margin-right: -8px;">
     <div class="cell-sm-12 cell-md-8 cell-lg-7 p-0">
+        <?php 
+        if ( function_exists('yoast_breadcrumb') ) {
+            yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+        }
+        ?>
         <div class="remark m-2 bg-white border-radius-2 text-leader">
             <?php echo category_description()?>
         </div>

@@ -15,7 +15,12 @@ $args = array('tag'=> substr($wp->request,4),
                 <?php echo previous_posts_link() ?>
             </div>
         <?php endif; ?>
-        <div class="muuri m-2">
+        <?php 
+        if ( function_exists('yoast_breadcrumb') ) {
+            yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+        }       
+        ?>
+        <div class="muuri">
             <?php while(have_posts()) : the_post();?>
                 <div class="item cell-fs-6 cell-sm-6 cell-md-4 cell-lg-4 cell-xl-3 p-0">
                     <a class="border-radius-2 border-solid bg-theme item-content d-block p-3 m-2" href="<?php the_permalink()?>">
